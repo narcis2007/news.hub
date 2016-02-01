@@ -1,0 +1,114 @@
+/*
+div
+{
+    border-color:orange;
+    border-style:solid;
+    border-radius:50%;
+    border-width:2px;
+}*/
+body
+{
+	/*background-image: url("wood-texture.jpg");
+    background-repeat: repeat;
+	*/
+	background-color:#1a1a1a;
+
+
+}
+p,ul
+{
+	color: white;
+}
+h1
+{
+	color: white;
+	text-align:center;
+}
+h2
+{
+	color: white;
+	margin-left:2em;
+}
+#text
+{
+	color: white;
+}
+#link
+{
+	color:4986CC;
+}
+#error
+{
+	color:red;
+}
+/*
+div#container{
+	display:inline-block;
+}
+*/
+
+form{
+	width:auto;
+	height:auto;
+	margin:2em auto;
+	padding:1em;
+	margin-left:12em;
+	border:0.1em solid grey;
+}
+div#center
+{
+	width:auto;
+	height:auto;
+	margin:2em auto;
+	margin-left:12em;
+	padding:1em;
+	border:0.1em solid grey;
+
+}
+div#sidebar
+{
+	position:fixed;
+	width:auto;
+	height:auto;
+	margin:2em auto;
+
+	padding-right:1em;
+	padding-left:1em;
+	border:0.1em solid grey;
+
+}
+div#searchcontainer
+{
+	position:fixed;
+	width:auto;
+	height:auto;
+	margin:13em auto;
+	float:left;
+	padding-right:1em;
+	padding-left:1em;
+	border:0.1em solid grey;
+
+	max-width:9em;
+	
+}
+div#title
+{
+	background-color:#27272F;
+}
+
+div#content
+{
+	background-color:#27272F;
+}
+
+
+#like
+{
+	color:#abc4cc;
+}
+/*
+#sidebar_button
+{
+	border:0.1em solid grey;
+}
+*/

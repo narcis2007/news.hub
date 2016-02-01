@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content%}
+	{% if request.user.is_anonymous %}
+			<a id="link" href="./login">Login</a>
+			<br>
+
+
+
+
+
+
+			<p id="text">Or</p>
+			<a id="link" href="./sign_up">Sign up</a>
+
+	{% else %}
+			<p>Hello {{user}}</p>
+
+			<!--<a id="link" href="profile/{{request.user.id}}/">Profile</a>-->
+			<!--<a id="link" href="profile/edit/">Edit profile</a>-->
+			<!--<a id="link" href="articles/get/user/">My articles</a>-->
+			<!--<a id="link" href="articles/get/user/comments/">My comments</a>-->
+			<!--{% if request.user.is_superuser %}-->
+       			 <!--<a id="link" href="contact/messages">Contact messages</a>-->
+			<!--{% endif %}-->
+
+			<a id="link" href="./logged_out">Log out</a>
+
+	{% endif %}
+{% endblock %}

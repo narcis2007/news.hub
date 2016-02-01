@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content%}
+
+		<form action="/auth" method="post">{% csrf_token %}
+
+		{{form.as_p}}
+		<input type="submit" value="Login">
+		{% if invalid_details %}
+			<p id="error">{{invalid_details}}</p>
+		{% endif %}
+		<br>
+		<a id="link" href="accounts/password/reset/">Forgot your password?</a>
+		</form>
+{% endblock %}
+

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content%}
+	<h1>Articles added by user {{request.user.username}}</h1>
+        {% for article in articles %}
+            <div id="title">
+                <h2 ><a id="link" href="/articles/get/{{article.id}}/">{{article.title}}</a></h2>
+            </div>
+            <div id="content">
+
+                <p>{{article.content|truncatewords:35}}
+                {% ifnotequal article.content article.content|truncatewords:35 %}
+                    <a id="link" href="/articles/get/{{article.id}}/"> Read more...</a>
+                {% endifnotequal %}
+                </p>
+                <a id="link" href="{% url 'delete_article' pk=article.pk %}" > Delete</a>
+                <a id="link" href="{% url 'update_article' pk=article.pk %}" > Update</a>
+            </div>
+        {% endfor %}
+{% endblock %}

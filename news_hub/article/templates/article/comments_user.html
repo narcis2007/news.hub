@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content%}
+	<h1>Comments added by user {{request.user.username}}</h1>
+        {% for comment in comments %}
+            <div id="title">
+                <h2 ><a id="link" href="/articles/get/{{comment.article.id}}/">{{comment.article.title}}</a></h2>
+            </div>
+            <div id="content">
+
+                <p>{{comment.content}}</p>
+
+                <a id="link" href="{% url 'delete_comment' pk=comment.pk %}" > Delete</a>
+                <a id="link" href="{% url 'update_comment' pk=comment.pk %}" > Update</a>
+            </div>
+        {% endfor %}
+{% endblock %}

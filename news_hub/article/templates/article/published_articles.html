@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content%}
+	<h1>Published Articles</h1>
+        {% for article in articles %}
+            <div id="title">
+                <h2 ><a id="link" href="/articles/get/{{article.id}}/">{{article.title}}</a></h2>
+            </div>
+            <div id="content">
+
+                <p>{{article.content|truncatewords:"35"}}
+                {% ifnotequal article.content article.content|truncatewords:"35" %}
+                    <a id="link" href="/articles/get/{{article.id}}/"> Read more...</a>
+                {% endifnotequal %}
+
+
+                </p>
+            </div>
+        {% endfor %}
+{% endblock %}
+{% block search %}
+<!--<div id="container">-->
+        <!--<div id="searchcontainer">-->
+            <!--<h3 id="text">Search</h3>-->
+            <!--{% csrf_token %}-->
+            <!--<input type="text" id="search" name="search"/>-->
+            <!--<p id="search-results">-->
+
+
+            <!--</p>-->
+        <!--</div>-->
+<!--</div>-->
+{% endblock %}

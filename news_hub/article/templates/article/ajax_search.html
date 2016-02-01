@@ -1,0 +1,7 @@
+{% if found_articles.count > 0 %}
+    {% for article in found_articles %}
+        <p id="text"><a href="/articles/get/{{article.id}}/">{{article.title|truncatechars:20}}</a> </p>
+    {% endfor %}
+{% else %}
+    <p>Nothing found</p>
+{% endif %}
